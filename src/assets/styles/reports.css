@@ -1,0 +1,460 @@
+/* src/assets/styles/reports.css */
+.reports-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .reports-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+  }
+  
+  .header-left h1 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+  
+  .date-range-selector {
+    display: flex;
+    gap: var(--spacing-xs);
+    background-color: var(--background-tertiary);
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .range-btn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
+  }
+  
+  .range-btn.active {
+    background-color: var(--background-primary);
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  
+  .reports-nav {
+    display: flex;
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .nav-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .nav-btn.active {
+    color: var(--primary-color);
+  }
+  
+  .nav-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+  }
+  
+  /* Analytics Section Styles */
+  .analytics-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  
+  .stat-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .stat-header h3 {
+    color: var(--text-secondary);
+    font-size: 1rem;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .status-distribution {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+  }
+  
+  .status-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .status-item label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  .status-item span {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .status-item span.completed {
+    color: var(--success-color);
+  }
+  
+  .status-item span.pending {
+    color: var(--warning-color);
+  }
+  
+  .status-item span.cancelled {
+    color: var(--error-color);
+  }
+  
+  .detailed-analysis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  
+  .analysis-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .analysis-card h3 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+  }
+  
+  .routes-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .route-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .route-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .route-name {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  
+  .route-bookings {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  .route-bar {
+    height: 8px;
+    background-color: var(--background-tertiary);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+  }
+  
+  .bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .trend-chart {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+  }
+  
+  .trend-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .trend-bar .bar {
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transition: height 0.3s ease;
+  }
+  
+  .bar-value {
+    font-size: 0.75rem;
+    color: white;
+    padding: var(--spacing-xs);
+  }
+  
+  .bar-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  @media (max-width: 768px) {
+    .header-left {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-md);
+    }
+  
+    .date-range-selector {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .detailed-analysis {
+      grid-template-columns: 1fr;
+    }
+  
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .destinations-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .destination-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .destination-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .destination-stats {
+    display: flex;
+    gap: var(--spacing-md);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  .cargo-types-chart {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .type-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .type-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Financial Reports Specific Styles */
+  .revenue-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .breakdown-item:last-child {
+    border-bottom: none;
+  }
+  
+  .profit-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .metric-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .positive {
+    color: var(--success-color);
+  }
+  
+  .negative {
+    color: var(--error-color);
+  }
+  
+  .monthly-chart {
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .month-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .chart-bars {
+    width: 100%;
+    display: flex;
+    gap: var(--spacing-xs);
+    height: 100%;
+    align-items: flex-end;
+  }
+  
+  .revenue-bar,
+  .expenses-bar {
+    flex: 1;
+    min-height: 4px;
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transition: height 0.3s ease;
+  }
+  
+  .revenue-bar {
+    background-color: var(--success-color);
+  }
+  
+  .expenses-bar {
+    background-color: var(--error-color);
+  }
+  
+  .bar-value {
+    font-size: 0.75rem;
+    color: white;
+    transform: rotate(-90deg);
+    margin-top: var(--spacing-md);
+    white-space: nowrap;
+  }
+  
+  .chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+  }
+  
+  .legend-color.revenue {
+    background-color: var(--success-color);
+  }
+  
+  .legend-color.expenses {
+    background-color: var(--error-color);
+  }
+  
+  .expenses-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .expense-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .expense-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .expense-amount {
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .monthly-chart {
+      height: 200px;
+    }
+  
+    .chart-legend {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .bar-value {
+      font-size: 0.65rem;
+    }
+  }

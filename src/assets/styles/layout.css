@@ -1,0 +1,115 @@
+/* src/assets/styles/layout.css */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 260px;
+    background-color: var(--background-primary);
+    border-right: 1px solid var(--border-color);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .sidebar-header {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .company-name {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .user-role {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    text-transform: capitalize;
+  }
+  
+  .sidebar-nav {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .nav-link:hover {
+    background-color: var(--background-secondary);
+    color: var(--primary-color);
+  }
+  
+  .nav-link-active {
+    background-color: var(--background-tertiary);
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  
+  .nav-icon {
+    margin-right: var(--spacing-md);
+    font-size: 1.25rem;
+  }
+  
+  .main-wrapper {
+    flex: 1;
+    margin-left: 260px;
+  }
+  
+  .header {
+    height: 64px;
+    background-color: var(--background-primary);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-lg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+  
+  .user-info {
+    text-align: right;
+    margin-right: var(--spacing-md);
+  }
+  
+  .user-name {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  
+  .logout-btn {
+    padding: var(--spacing-xs) var(--spacing-md) !important;
+  }
+  
+  .main-content {
+    padding: var(--spacing-lg);
+    background-color: var(--background-secondary);
+    min-height: calc(100vh - 64px);
+  }

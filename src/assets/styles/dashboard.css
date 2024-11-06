@@ -1,0 +1,58 @@
+/* // src/assets/styles/dashboard.css */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.stat-card {
+  padding: var(--spacing-lg);
+}
+
+.stat-title {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.stat-trend {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.stat-trend.positive {
+  color: var(--success-color);
+}
+
+.stat-trend.negative {
+  color: var(--error-color);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.recent-bookings,
+.active-shipments {
+  min-height: 300px;
+}

@@ -1,0 +1,311 @@
+/* src/assets/styles/cargo.css */
+.cargo-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .cargo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cargo-header h1 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+  
+  .cargo-tabs {
+    display: flex;
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .tab-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+    position: relative;
+  }
+  
+  .tab-btn.active {
+    color: var(--primary-color);
+  }
+  
+  .tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+  }
+  
+  .cargo-form-card {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cargo-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .cargo-form h2 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .cargo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  
+  .cargo-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .cargo-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .tracking-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .tracking-info h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+  }
+  
+  .cargo-type {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--background-tertiary);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  .status-badge {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .status-pending {
+    background-color: var(--warning-color);
+    color: var(--text-primary);
+  }
+  
+  .status-in-transit {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .status-delivered {
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .cargo-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+  
+  .cargo-dates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .detail-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .detail-group label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  .detail-group span {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  .detail-group small {
+    color: var(--text-tertiary);
+    font-size: 0.875rem;
+  }
+  
+  /* Tracking Section Styles */
+  .tracking-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .tracking-search-card {
+    text-align: center;
+  }
+  
+  .tracking-search-card h2 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+  }
+  
+  .tracking-form {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-end;
+  }
+  
+  .tracking-form .input-group {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  
+  .tracking-result-card {
+    padding: var(--spacing-xl);
+  }
+  
+  .tracking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .tracking-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--spacing-xl) 0;
+    position: relative;
+  }
+  
+  .tracking-timeline::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 0;
+  }
+  
+  .timeline-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .timeline-point::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--background-primary);
+    border: 2px solid var(--border-color);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .timeline-point.active::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  .point-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
+  .timeline-point.active .point-label {
+    color: var(--primary-color);
+  }
+  
+  .tracking-details {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .route-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: var(--background-secondary);
+    border-radius: var(--border-radius-md);
+  }
+  
+  .shipment-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+  
+  .not-found-message {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .not-found-message h3 {
+    color: var(--error-color);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .not-found-message p {
+    color: var(--text-secondary);
+  }
+  
+  @media (max-width: 768px) {
+    .tracking-form {
+      flex-direction: column;
+    }
+  
+    .cargo-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .cargo-details,
+    .cargo-dates,
+    .shipment-info {
+      grid-template-columns: 1fr;
+    }
+  
+    .route-info {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+  }

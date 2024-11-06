@@ -1,0 +1,57 @@
+/* src/assets/styles/components.css */
+.btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-sm);
+    border: none;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--secondary-dark);
+  }
+  
+  .input-group {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .input-label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    transition: border-color 0.2s;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .card {
+    background-color: var(--background-primary);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-lg);
+  }

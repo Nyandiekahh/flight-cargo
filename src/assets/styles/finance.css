@@ -1,0 +1,309 @@
+/* src/assets/styles/finance.css */
+.finance-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .finance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .finance-header h1 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+  
+  .finance-tabs {
+    display: flex;
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .tab-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+    position: relative;
+  }
+  
+  .tab-btn.active {
+    color: var(--primary-color);
+  }
+  
+  .tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+  }
+  
+  /* Transaction Form Styles */
+  .transaction-form-card {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  .full-width {
+    grid-column: span 2;
+  }
+  
+  /* Transaction List Styles */
+  .transaction-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  
+  .transaction-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .transaction-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .transaction-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+  
+  .transaction-type {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.25rem;
+  }
+  
+  .transaction-type.income {
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .transaction-type.expense {
+    background-color: var(--error-color);
+    color: white;
+  }
+  
+  .transaction-category {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  .transaction-amount {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .transaction-amount.income {
+    color: var(--success-color);
+  }
+  
+  .transaction-amount.expense {
+    color: var(--error-color);
+  }
+  
+  .transaction-description {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  .transaction-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .detail-item label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+  }
+  
+  .detail-item span {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+  }
+  
+  /* Finance Dashboard Styles */
+  .finance-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  
+  .metric-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+  }
+  
+  .metric-card h3 {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .metric-value {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .metric-value.income {
+    color: var(--success-color);
+  }
+  
+  .metric-value.expense {
+    color: var(--error-color);
+  }
+  
+  .category-summary {
+    margin-top: var(--spacing-lg);
+  }
+  
+  .category-summary h3 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+  }
+  
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--background-secondary);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .category-name {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+  
+  .category-amount {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  /* Status Badges */
+  .status-badge {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .status-completed {
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .status-pending {
+    background-color: var(--warning-color);
+    color: var(--text-primary);
+  }
+  
+  .status-failed {
+    background-color: var(--error-color);
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .full-width {
+      grid-column: auto;
+    }
+  
+    .transaction-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .transaction-details {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .category-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .finance-header,
+    .finance-tabs,
+    .new-transaction-btn {
+      display: none;
+    }
+  
+    .finance-dashboard,
+    .transaction-list {
+      gap: var(--spacing-md);
+    }
+  
+    .metric-card,
+    .transaction-card {
+      break-inside: avoid;
+    }
+  }
